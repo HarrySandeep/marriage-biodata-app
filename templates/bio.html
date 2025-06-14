@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Marriage Bio Data - Sandeep Kumar</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fffbf0, #ffe1b3);
+            color: #5a3e36;
+            margin: 0;
+            padding: 20px 0 40px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff8e1;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(89, 62, 45, 0.15);
+        }
+        h1 {
+            text-align: center;
+            color: #b9712d;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        h2 {
+            color: #b9712d;
+            margin-top: 30px;
+            border-bottom: 2px solid #f0c674;
+            padding-bottom: 6px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #7a5a37;
+            line-height: 1.6;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #6f503a;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #f0c674;
+            margin: 30px 0;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Marriage Biodata</h1>
+
+        <div class="section">
+            <h2>Personal Details:</h2>
+            <ul>
+                <li><strong>Name:</strong> {{ data['Name'] }}</li>
+                <li><strong>Date of Birth:</strong> {{ data['Date of Birth'] }}</li>
+                <li><strong>Age:</strong> {{ data['Age'] }}</li>
+                <li><strong>Height:</strong> {{ data['Height'] }}</li>
+                <li><strong>Complexion:</strong> {{ data['Complexion'] }}</li>
+                <li><strong>Religion:</strong> {{ data['Religion'] }}</li>
+                <li><strong>Profession:</strong> {{ data['Profession'] }}</li>
+                <li><strong>Current Location:</strong> {{ data['Current Location'] }}</li>
+                <li><strong>Permanent Address:</strong><br>{{ data['Permanent Address']|replace('\n','<br>')|safe }}</li>
+            </ul>
+        </div>
+
+        <hr />
+
+        <div class="section">
+            <h2>Family Details:</h2>
+            <ul>
+                <li><strong>Father's Name:</strong> {{ data["Father's Name"] }}</li>
+                <li><strong>Mother's Name:</strong> {{ data["Mother's Name"] }}</li>
+                <li><strong>Siblings:</strong> {{ data['Siblings'] }}</li>
+            </ul>
+        </div>
+
+        <hr />
+
+        <div class="section">
+            <h2>📞 Contact Details</h2>
+            <ul>
+                <li><strong>Phone:</strong> {{ data['Phone'] }}</li>
+                <li><strong>Email:</strong> {{ data['Email'] }}</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🎓 Education</h2>
+            <ul>
+                <li>{{ data['Education'] }}</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📝 About Myself</h2>
+            <p>{{ data['About Myself'] }}</p>
+        </div>
+    </div>
+</body>
+</html>

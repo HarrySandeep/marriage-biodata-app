@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home - Marriage Biodata QR</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fff9e6, #ffedbc);
+            color: #6b4e31;
+            margin: 0;
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1 {
+            font-weight: 700;
+            margin-bottom: 40px;
+            letter-spacing: 1.5px;
+            color: #b37123;
+            text-align: center;
+        }
+        .qr-container {
+            background: #fff8e1;
+            padding: 30px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(183, 113, 35, 0.25);
+            display: inline-block;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease;
+        }
+        .qr-container:hover {
+            transform: scale(1.05);
+        }
+        img {
+            display: block;
+            width: 260px;
+            height: 260px;
+        }
+        a button {
+            background-color: #b37123;
+            border: none;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-size: 18px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(179, 113, 35, 0.4);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+        a button:hover {
+            background-color: #8c5917;
+            box-shadow: 0 8px 20px rgba(140, 89, 23, 0.6);
+        }
+        @media (max-width: 400px) {
+            .qr-container img {
+                width: 200px;
+                height: 200px;
+            }
+            a button {
+                padding: 14px 28px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Scan QR or Click Button to View Bio Data</h1>
+    <div class="qr-container">
+        <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code" />
+    </div>
+    <a href="/bio"><button>View Bio Data</button></a>
+</body>
+</html>
