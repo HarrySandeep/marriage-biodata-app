@@ -45,7 +45,7 @@ def home():
 
 @app.route('/bio')
 def bio():
-    return render_template('bio.html', data=bio_data)
+    return render_template('bio.html', bio=bio_data)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=PORT, debug=True)
